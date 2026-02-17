@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retirement Projection Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Retirement Projection Calculator</h1>
+
+<div class="container">
+
+  <h2>Basic Info</h2>
+  <label>Current Age <input type="number" id="currentAge"></label>
+  <label>Retirement Age <input type="number" id="retireAge"></label>
+  <label>Expected Growth Rate (%) <input type="number" id="growthRate"></label>
+  <label>Inflation Rate (%) <input type="number" id="inflationRate"></label>
+
+  <h2>Current Balances</h2>
+  <label>IRA Balance <input type="number" id="iraBalance"></label>
+  <label>401k Balance <input type="number" id="kBalance"></label>
+  <label>Brokerage Balance <input type="number" id="brokerageBalance"></label>
+
+  <h2>Contributions</h2>
+
+  <label>
+    <input type="checkbox" id="maxToggle">
+    Max Retirement Accounts
+  </label>
+
+  <label>
+    <input type="checkbox" id="growToggle">
+    Contributions Grow Annually (% below)
+  </label>
+
+  <label>Annual Contribution Growth % <input type="number" id="contributionGrowth"></label>
+
+  <label>IRA Annual Contribution <input type="number" id="iraContribution"></label>
+  <label>401k Employee Contribution <input type="number" id="kContribution"></label>
+  <label>401k Employer Match % <input type="number" id="matchPercent"></label>
+  <label>401k Profit Sharing Contribution <input type="number" id="profitSharing"></label>
+  <label>Brokerage Contribution <input type="number" id="brokerageContribution"></label>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <h2>Results</h2>
+  <div id="results"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
