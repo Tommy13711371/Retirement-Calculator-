@@ -17,31 +17,51 @@
   <label>Inflation Rate (%) <input type="number" id="inflationRate"></label>
 
   <h2>Current Balances</h2>
-  <label>IRA Balance <input type="number" id="iraBalance"></label>
-  <label>401k Balance <input type="number" id="kBalance"></label>
-  <label>Brokerage Balance <input type="number" id="brokerageBalance"></label>
+  <div class="columns">
+    <!-- User Column -->
+    <div class="column">
+      <h3>Your Accounts</h3>
+      <label>IRA Balance <input type="number" id="iraBalance"></label>
+      <label>Roth IRA Balance <input type="number" id="rothIraBalance"></label>
+      <label>401k Balance <input type="number" id="kBalance"></label>
+      <label>Roth 401k Balance <input type="number" id="rothKBalance"></label>
+      <label>Brokerage Balance <input type="number" id="brokerageBalance"></label>
+    </div>
+
+    <!-- Spouse Column -->
+    <div class="column">
+      <h3>Spouse Accounts</h3>
+      <label>IRA Balance <input type="number" id="spouseIraBalance"></label>
+      <label>Roth IRA Balance <input type="number" id="spouseRothIraBalance"></label>
+      <label>401k Balance <input type="number" id="spouseKBalance"></label>
+      <label>Roth 401k Balance <input type="number" id="spouseRothKBalance"></label>
+      <label>Brokerage Balance <input type="number" id="spouseBrokerageBalance"></label>
+    </div>
+  </div>
 
   <h2>Contributions</h2>
-
   <label>
-    <input type="checkbox" id="maxToggle">
-    Max Retirement Accounts
+    <input type="checkbox" id="maxToggle"> Max Retirement Accounts
   </label>
 
   <label>
-    <input type="checkbox" id="growToggle">
-    Contributions Grow Annually (% below)
+    <input type="checkbox" id="growToggle"> Contributions Grow Annually (% below)
   </label>
 
   <label>Annual Contribution Growth % <input type="number" id="contributionGrowth"></label>
 
   <label>IRA Annual Contribution <input type="number" id="iraContribution"></label>
+  <label>Roth IRA Annual Contribution <input type="number" id="rothIraContribution"></label>
   <label>401k Employee Contribution <input type="number" id="kContribution"></label>
+  <label>Roth 401k Employee Contribution <input type="number" id="rothKContribution"></label>
   <label>401k Employer Match % <input type="number" id="matchPercent"></label>
   <label>401k Profit Sharing Contribution <input type="number" id="profitSharing"></label>
   <label>Brokerage Contribution <input type="number" id="brokerageContribution"></label>
-
-  <button onclick="calculate()">Calculate</button>
+  <label>Spouse IRA Contribution <input type="number" id="spouseIraContribution"></label>
+  <label>Spouse Roth IRA Contribution <input type="number" id="spouseRothIraContribution"></label>
+  <label>Spouse 401k Contribution <input type="number" id="spouseKContribution"></label>
+  <label>Spouse Roth 401k Contribution <input type="number" id="spouseRothKContribution"></label>
+  <label>Spouse Brokerage Contribution <input type="number" id="spouseBrokerageContribution"></label>
 
   <h2>Results</h2>
   <div id="results"></div>
